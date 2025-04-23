@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Amily's Travel Map</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div id="map-container">
+    <div id="map-wrapper">
+        <div id="map-content">
+            <img id="map-image" src="images/japan-map.png" alt="Japan Map" />
+            <div id="pin-layer"></div>
+        </div>
+    </div>
+   
+    <div id="popup" class="hidden">
+      <div class="popup-arrow"></div>
+      <div class="popup-content">
+        <img id="popup-thumbnail" src="" alt="Box Figure" />
+        <h2 id="popup-title"></h2>
+        <p id="popup-message"></p>
+        <span class="close-btn" onclick="closePopup()">×</span>
+      </div>
+    </div>
+    <div id="target-indicator"></div>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>

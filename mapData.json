@@ -1,0 +1,157 @@
+[
+    {
+      "id": 1,
+      "name": "迪士尼樂園",
+      "position": { "x": 0.625, "y": 0.48 },
+      "thumbnail": "images/DisneyLand.png",
+      "message": "初次來到童年與夢境交織的國度，留下感動的淚水，深深被迪士尼的魅力所吸引。"
+    },
+    {
+      "id": 2,
+      "name": "迪士尼海洋",
+      "position": { "x": 0.63, "y": 0.485 },
+      "thumbnail": "images/DisneySea.png",
+      "message": "再次來到迪士尼，與樂園截然不同的海洋，有幸進到夢幻般的新園區，並與唐老鴨相見歡。"
+    },
+    {
+      "id": 3,
+      "name": "福岡",
+      "position": { "x": 0.28, "y": 0.53 },
+      "thumbnail": "images/Fukuoka.png",
+      "message": "濃郁的豚骨拉麵、柳州小船風情、糸島的夫妻岩、昭和風情的門司港及第一次參加日本LIVE。"
+    },
+    {
+      "id": 4,
+      "name": "箱根",
+      "position": { "x": 0.58, "y": 0.5 },
+      "thumbnail": "images/Hakone.png",
+      "message": "搭乘海盜船，滑破寧靜神秘的盧之湖，在雲霧繚繞之際被富士山的壯麗感動。"
+    },
+    {
+      "id": 5,
+      "name": "飛驒",
+      "position": { "x": 0.51, "y": 0.44 },
+      "thumbnail": "images/Hida.png",
+      "message": "高山中的小鎮，品嘗鮮美的飛驒牛與特色的五平餅，漫步在江戶街頭"
+    },
+    {
+      "id": 6,
+      "name": "出雲",
+      "position": { "x": 0.35, "y": 0.465 },
+      "thumbnail": "images/Izumo.png",
+      "message": "特地於神在月前往，與日本眾神明同歡，靜謐又肅穆的神社，是神道教的中心。"
+    },
+    {
+      "id": 7,
+      "name": "香川",
+      "position": { "x": 0.39, "y": 0.525 },
+      "thumbnail": "images/Kagawa.png",
+      "message": "烏龍麵的故鄉，與一覽無遺的天空鳥居，在正值梅花盛開季節前往。"
+    },
+    {
+      "id": 8,
+      "name": "鎌倉",
+      "position": { "x": 0.6, "y": 0.48 },
+      "thumbnail": "images/Kamakura.png",
+      "message": "江之島的神秘、莊嚴的大佛，走著走著，火車駛過海天一線的道路。"
+    },
+    {
+      "id": 9,
+      "name": "熊本",
+      "position": { "x": 0.5, "y": 0.5 },
+      "thumbnail": "images/Kumamoto.png",
+      "message": "韌性的熊本人，以熊本城為中心生活，這裡還是海賊王的故鄉，除了熊本熊以外，九州沒有熊。"
+    },
+    {
+      "id": 10,
+      "name": "京都",
+      "position": { "x": 0.46, "y": 0.48 },
+      "thumbnail": "images/Kyoto.png",
+      "message": "夏季的京都，充斥祭典的氛圍，現代又傳統的都市，花火大會與蘋果糖，浪漫又熱情。"
+    },
+    {
+      "id": 11,
+      "name": "三重",
+      "position": { "x": 0.49, "y": 0.52 },
+      "thumbnail": "images/Mie.png",
+      "message": "保有古老技藝的真珠島海女，美味的各式海產，守護大海與眾人的伊勢神宮。"
+    },
+    {
+      "id": 12,
+      "name": "紋別",
+      "position": { "x": 0.75, "y": 0.1 },
+      "thumbnail": "images/Monbetsu.png",
+      "message": "鮮甜可口的帝王蟹與鄂霍次克海的流冰，可惜強風攪局，破冰船無法出航。"
+    },
+    {
+      "id": 13,
+      "name": "長崎",
+      "position": { "x": 0.235, "y": 0.54 },
+      "thumbnail": "images/Nagasaki.png",
+      "message": "這裡記錄了二戰的傷痛，80年後的今日，在傷痛中繼續前進，銘記歷史，珍愛和平。"
+    },
+    {
+      "id": 14,
+      "name": "奈良",
+      "position": { "x": 0.475, "y": 0.5 },
+      "thumbnail": "images/Nara.png",
+      "message": "熱情親人的小鹿，與秋楓為伍，古色古香的街道，啜飲著咖啡。"
+    },
+    {
+      "id": 15,
+      "name": "大分",
+      "position": { "x": 0.29, "y": 0.558 },
+      "thumbnail": "images/Oita.png",
+      "message": "沿著鄉村小徑一路來到了由布院，駛著山路前往進擊的巨人水壩，品味著這個孕育出鉅作的小鎮。"
+    },
+    {
+      "id": 16,
+      "name": "USJ",
+      "position": { "x": 0.445, "y": 0.52 },
+      "thumbnail": "images/USJ.png",
+      "message": "走訪瀰漫焦糖香味的活米村，彷彿真的進到了魔法世界，轉身又是另一個遊戲天堂。"
+    },
+    {
+      "id": 17,
+      "name": "WTL",
+      "position": { "x": 0.46, "y": 0.51 },
+      "thumbnail": "images/WTL.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    },
+    {
+      "id": 18,
+      "name": "大阪",
+      "position": { "x": 0.455, "y": 0.508 },
+      "thumbnail": "images/Osaka.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    },
+    {
+      "id": 19,
+      "name": "長野",
+      "position": { "x": 0.58, "y": 0.44 },
+      "thumbnail": "images/Nagano.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    },
+    {
+      "id": 20,
+      "name": "鳥取",
+      "position": { "x": 0.38, "y": 0.47 },
+      "thumbnail": "images/Tottori.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    },
+    {
+      "id": 21,
+      "name": "島根",
+      "position": { "x": 0.36, "y": 0.47 },
+      "thumbnail": "images/Shimane.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    },
+    {
+      "id": 22,
+      "name": "和歌山",
+      "position": { "x": 0.45, "y": 0.53 },
+      "thumbnail": "images/Wakayama.png",
+      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
+    }    
+  ]
+  

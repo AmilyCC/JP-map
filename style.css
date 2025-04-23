@@ -1,0 +1,204 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  overflow: hidden;
+  background: linear-gradient(#9DDDEE, #BFEFFF);
+  font-family: sans-serif;
+}
+
+#map-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+
+#map-wrapper {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  left: 0;
+  transform: scale(0.55); /* 初始縮小 */
+  transform-origin: center center;
+  transition: transform 0.4s ease;
+  cursor: grab;
+}
+
+
+.dragging #map-wrapper {
+  cursor: grabbing;
+}
+
+#map-content {
+  position: relative;
+}
+
+#map-image {
+  width: 1000px;
+  display: block;
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2));
+  pointer-events: none;
+  user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+}
+
+#pin-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 1000px;
+  height: 100%;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.point {
+  position: absolute;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  pointer-events: auto;
+  transition: transform 0.2s ease;
+}
+
+.pin-shadow {
+  position: absolute;
+  bottom: -4px;
+  left: 50%;
+  width: 24px;
+  height: 8px;
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.pin-icon {
+  width: 32px;
+  height: 32px;
+  transition: transform 0.2s ease;
+  z-index: 1;
+}
+
+
+.point:hover .pin-icon {
+  transform: scale(1.3);
+}
+
+body.dragging #map-wrapper {
+  cursor: grab;
+}
+
+/* 🎯 對話框 */
+#popup {
+  position: absolute;
+  z-index: 10;
+  transform: scale(0.9);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  pointer-events: none;
+}
+
+#popup.show {
+  transform: scale(1);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.popup-content {
+  position: relative;
+  background: #fef8e2;
+  background-image: 
+    linear-gradient(to right, rgba(0,0,0,0.05) 2px, transparent 1px),
+    linear-gradient(to bottom, rgba(0,0,0,0.05) 2px, transparent 1px);
+  background-size: 20px 20px; /* 格子大小 */
+  width: 250px;
+  height: 500px;
+  padding: 0px;
+  border-radius: 30px;
+  border-top: 15px solid #333;
+  box-sizing: border-box;
+  padding: 15px;
+}
+
+.popup-content img {
+  width: 100%;
+  margin: 0;
+  border-radius: 6px 6px 0 0;
+}
+
+.popup-content h2 {
+  margin: 5px 0;
+  font-size: 1.3em;
+  font-weight: 900;
+}
+
+.popup-content p {
+  margin:0;
+  font-size: 0.9em;
+  color: #333;
+}
+
+.popup-arrow {
+  position: absolute;
+  width: 0;
+  height: 0;
+  z-index: 99;
+}
+
+/*  手機 */
+@media (max-width: 768px) {
+  .popup-content {
+    max-height: 80vh;
+    overflow-y: auto;
+  }
+  .popup-arrow {
+    left: -10px;
+    top: 10px;
+    border-top: 10px solid transparent;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid #fef8e2;
+  }
+
+}
+
+/*  桌機 */
+@media (min-width: 769px) {
+  .popup-arrow {
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 10px solid #fef8e2;
+  }
+  
+}
+
+.close-btn {
+  position: absolute;
+  top: 6px;
+  right: 10px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+#target-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: red;
+  border-radius: 50%;
+  z-index: 9999;
+  pointer-events: none;
+  opacity: 0.6;
+  transform: translate(-50%, -50%);
+}
