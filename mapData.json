@@ -129,21 +129,21 @@
       "id": 19,
       "name": "長野",
       "position": { "x": 0.58, "y": 0.44 },
-      "thumbnail": "images/Nagano.png",
+      "thumbnail": "images/Nagano.PNG",
       "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
     },
     {
       "id": 20,
       "name": "鳥取",
       "position": { "x": 0.38, "y": 0.47 },
-      "thumbnail": "images/Tottori.png",
+      "thumbnail": "images/Tottori.PNG",
       "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
     },
     {
       "id": 21,
       "name": "島根",
       "position": { "x": 0.36, "y": 0.47 },
-      "thumbnail": "images/Shimane.png",
+      "thumbnail": "images/Shimane.PNG",
       "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
     },
     {

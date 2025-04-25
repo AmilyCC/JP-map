@@ -189,16 +189,3 @@ body.dragging #map-wrapper {
   cursor: pointer;
 }
 
-#target-indicator {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 20px;
-  height: 20px;
-  background: red;
-  border-radius: 50%;
-  z-index: 9999;
-  pointer-events: none;
-  opacity: 0.6;
-  transform: translate(-50%, -50%);
-}

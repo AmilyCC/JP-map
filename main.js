@@ -16,15 +16,15 @@ const defaultTransform = { x: 0, y: 0 };
 
 // 載入地圖資料
 fetch("mapData.json")
-  .then(res => res.json())
-  .then(data => {
+  .then((res) => res.json())
+  .then((data) => {
     mapData = data;
     renderPoints();
   });
 
 // 插入座標
 function renderPoints() {
-  mapData.forEach(point => {
+  mapData.forEach((point) => {
     const el = document.createElement("div");
     el.className = "point";
     el.style.left = `${point.position.x * 1000}px`;
@@ -39,10 +39,9 @@ function renderPoints() {
     img.className = "pin-icon";
 
     el.appendChild(shadow);
-    el.appendChild(img);    
+    el.appendChild(img);
 
-
-    el.addEventListener("click", e => {
+    el.addEventListener("click", (e) => {
       e.stopPropagation();
       if (isPopupActive) {
         closePopup(() => focusOnPoint(point, el));
@@ -54,7 +53,6 @@ function renderPoints() {
     pinLayer.appendChild(el);
   });
 }
-
 
 //  點擊座標後的scale 與 translate
 function applyTransform() {
@@ -97,17 +95,21 @@ function focusOnPoint(point, pointEl) {
         popup.style.top = `${rect.top - popupHeight - 16}px`;
       }
 
-      popupTitle.innerText = point.name;
-      popupMessage.innerText = point.message;
-      popupThumbnail.src = point.thumbnail;
-      popup.classList.remove("hide");
-      popup.classList.add("show");
+      // 預先建立 Image 來載入
+      const preloadImg = new Image();
+      preloadImg.src = point.thumbnail;
+
+      preloadImg.onload = () => {
+        popupTitle.innerText = point.name;
+        popupMessage.innerText = point.message;
+        popupThumbnail.src = point.thumbnail;
+
+        popup.classList.remove("hide");
+        popup.classList.add("show");
+      };
     }, 400);
-  }, 300); 
+  }, 300);
 }
-
-
-
 
 //  關閉POPUP與地圖還原
 function closePopup(callback = null) {
@@ -123,26 +125,25 @@ function closePopup(callback = null) {
   }, 300);
 }
 
-document.addEventListener("click", e => {
+document.addEventListener("click", (e) => {
   if (isPopupActive && !popup.contains(e.target)) {
     closePopup();
   }
 });
 
-
 // 滑鼠拖曳與滾輪縮放PC
 let isDragging = false;
 let start = { x: 0, y: 0 };
 
-wrapper.addEventListener("mousedown", e => {
+wrapper.addEventListener("mousedown", (e) => {
   if (window.innerWidth > 768) {
     isDragging = true;
     start.x = e.clientX;
     start.y = e.clientY;
-    document.body.classList.add("dragging"); 
+    document.body.classList.add("dragging");
   }
 });
-window.addEventListener("mousemove", e => {
+window.addEventListener("mousemove", (e) => {
   if (isDragging) {
     const dx = (e.clientX - start.x) / currentScale;
     const dy = (e.clientY - start.y) / currentScale;
@@ -158,19 +159,22 @@ window.addEventListener("mouseup", () => {
   document.body.classList.remove("dragging");
 });
 
-wrapper.addEventListener("wheel", e => {
-  e.preventDefault();
-  const scaleAmount = -e.deltaY * 0.001;
-  currentScale = Math.min(Math.max(0.5, currentScale + scaleAmount), 2);
-  applyTransform();
-}, { passive: false });
-
+wrapper.addEventListener(
+  "wheel",
+  (e) => {
+    e.preventDefault();
+    const scaleAmount = -e.deltaY * 0.001;
+    currentScale = Math.min(Math.max(0.5, currentScale + scaleAmount), 2);
+    applyTransform();
+  },
+  { passive: false }
+);
 
 // 兩指縮放&一指拖曳(SP)
 let lastTouchDist = 0;
 let isTouchDragging = false;
 
-wrapper.addEventListener("touchstart", e => {
+wrapper.addEventListener("touchstart", (e) => {
   if (e.touches.length === 1) {
     isTouchDragging = true;
     start.x = e.touches[0].clientX;
@@ -180,27 +184,31 @@ wrapper.addEventListener("touchstart", e => {
   }
 });
 
-wrapper.addEventListener("touchmove", e => {
-  e.preventDefault();
+wrapper.addEventListener(
+  "touchmove",
+  (e) => {
+    e.preventDefault();
 
-  if (e.touches.length === 1 && isTouchDragging) {
-    const dx = (e.touches[0].clientX - start.x) / currentScale;
-    const dy = (e.touches[0].clientY - start.y) / currentScale;
-    currentTransform.x += dx;
-    currentTransform.y += dy;
-    start.x = e.touches[0].clientX;
-    start.y = e.touches[0].clientY;
-    applyTransform();
-  } else if (e.touches.length === 2) {
-    const newDist = getTouchDistance(e.touches[0], e.touches[1]);
-    const delta = newDist - lastTouchDist;
-    currentScale = Math.min(Math.max(0.5, currentScale + delta * 0.005), 2);
-    lastTouchDist = newDist;
-    applyTransform();
-  }
-}, { passive: false });
+    if (e.touches.length === 1 && isTouchDragging) {
+      const dx = (e.touches[0].clientX - start.x) / currentScale;
+      const dy = (e.touches[0].clientY - start.y) / currentScale;
+      currentTransform.x += dx;
+      currentTransform.y += dy;
+      start.x = e.touches[0].clientX;
+      start.y = e.touches[0].clientY;
+      applyTransform();
+    } else if (e.touches.length === 2) {
+      const newDist = getTouchDistance(e.touches[0], e.touches[1]);
+      const delta = newDist - lastTouchDist;
+      currentScale = Math.min(Math.max(0.5, currentScale + delta * 0.005), 2);
+      lastTouchDist = newDist;
+      applyTransform();
+    }
+  },
+  { passive: false }
+);
 
-wrapper.addEventListener("touchend", e => {
+wrapper.addEventListener("touchend", (e) => {
   isTouchDragging = false;
 });
 
