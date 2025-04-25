@@ -122,7 +122,7 @@ body.dragging #map-wrapper {
   height: 500px;
   padding: 0px;
   border-radius: 30px;
-  border-top: 15px solid #333;
+  border-right: 15px solid #333;
   box-sizing: border-box;
   padding: 15px;
 }
@@ -160,7 +160,7 @@ body.dragging #map-wrapper {
   }
   .popup-arrow {
     left: -10px;
-    top: 10px;
+    top: 25px;
     border-top: 10px solid transparent;
     border-bottom: 10px solid transparent;
     border-right: 10px solid #fef8e2;
