@@ -3,7 +3,7 @@ const pinLayer = document.getElementById("pin-layer");
 const popup = document.getElementById("popup");
 const popupTitle = document.getElementById("popup-title");
 const popupMessage = document.getElementById("popup-message");
-const popupThumbnail = document.getElementById("popup-thumbnail");
+const popupImage = document.getElementById("popup-image");
 
 let mapData = [];
 let isPopupActive = false;
@@ -44,11 +44,12 @@ function renderPoints() {
     el.addEventListener("click", (e) => {
       e.stopPropagation();
       if (isPopupActive) {
-        closePopup(() => focusOnPoint(point, el));
+        closePopup(() => focusOnPoint(point, el), false); // ❗ 不 reset
       } else {
         focusOnPoint(point, el);
       }
     });
+    
 
     pinLayer.appendChild(el);
   });
@@ -97,12 +98,12 @@ function focusOnPoint(point, pointEl) {
 
       // 預先建立 Image 來載入
       const preloadImg = new Image();
-      preloadImg.src = point.thumbnail;
+      preloadImg.src = point.image;
 
       preloadImg.onload = () => {
         popupTitle.innerText = point.name;
         popupMessage.innerText = point.message;
-        popupThumbnail.src = point.thumbnail;
+        popupImage.src = point.image;
 
         popup.classList.remove("hide");
         popup.classList.add("show");
@@ -112,18 +113,21 @@ function focusOnPoint(point, pointEl) {
 }
 
 //  關閉POPUP與地圖還原
-function closePopup(callback = null) {
+function closePopup(callback = null, resetMap = true) {
   popup.classList.remove("show");
   popup.classList.add("hide");
 
   setTimeout(() => {
     isPopupActive = false;
-    currentScale = defaultScale;
-    currentTransform = { ...defaultTransform };
-    applyTransform();
+    if (resetMap) {
+      currentScale = defaultScale;
+      currentTransform = { ...defaultTransform };
+      applyTransform();
+    }
     if (callback) callback();
   }, 300);
 }
+
 
 document.addEventListener("click", (e) => {
   if (isPopupActive && !popup.contains(e.target)) {
@@ -131,7 +135,7 @@ document.addEventListener("click", (e) => {
   }
 });
 
-// 滑鼠拖曳與滾輪縮放PC
+// 滑鼠拖曳與滾輪縮放(PC)
 let isDragging = false;
 let start = { x: 0, y: 0 };
 
@@ -217,3 +221,19 @@ function getTouchDistance(t1, t2) {
   const dy = t1.clientY - t2.clientY;
   return Math.sqrt(dx * dx + dy * dy);
 }
+
+// 頁面提示 
+const guideOverlay = document.getElementById("guide-overlay");
+
+function hideGuide() {
+  if (guideOverlay) {
+    guideOverlay.classList.add("hide");
+    setTimeout(() => {
+      guideOverlay.style.display = "none";
+    }, 500);
+  }
+}
+
+document.addEventListener("click", () => {
+  hideGuide();
+});

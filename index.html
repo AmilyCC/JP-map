@@ -11,8 +11,12 @@
     <meta property="og:title" content="Amily 的旅日地圖" />
     <meta property="og:description" content="那一年，我在日本踏遍的足跡，我將美好的記憶結合嶄新的科技，做成這份小地圖" />
     <meta property="og:image" content="./images/favion.ico" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!--  Google Fonts 設定-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap" rel="stylesheet">
 </head>
 <body>
   <div id="map-container">
@@ -26,14 +30,19 @@
     <div id="popup" class="hidden">
       <div class="popup-arrow"></div>
       <div class="popup-content">
-        <img id="popup-thumbnail" src="" alt="Box Figure" />
+        <img id="popup-image" src="" alt="Box Figure" />
         <h2 id="popup-title"></h2>
         <p id="popup-message"></p>
         <span class="close-btn" onclick="closePopup()">×</span>
       </div>
     </div>
   </div>
-
+  <div id="guide-overlay" class="show">
+    <div class="guide-message">
+      歡迎來到<span>Amily的旅日地圖✈️🎌</span> <br>
+      點擊一個地標或縮放看看吧！
+    </div>
+  </div>
   <script src="main.js"></script>
 </body>
 </html>

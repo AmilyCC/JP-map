@@ -1,157 +1,226 @@
 [
-    {
-      "id": 1,
-      "name": "迪士尼樂園",
-      "position": { "x": 0.625, "y": 0.48 },
-      "thumbnail": "images/DisneyLand.png",
-      "message": "初次來到童年與夢境交織的國度，留下感動的淚水，深深被迪士尼的魅力所吸引。"
-    },
-    {
-      "id": 2,
-      "name": "迪士尼海洋",
-      "position": { "x": 0.63, "y": 0.485 },
-      "thumbnail": "images/DisneySea.png",
-      "message": "再次來到迪士尼，與樂園截然不同的海洋，有幸進到夢幻般的新園區，並與唐老鴨相見歡。"
-    },
-    {
-      "id": 3,
-      "name": "福岡",
-      "position": { "x": 0.28, "y": 0.53 },
-      "thumbnail": "images/Fukuoka.png",
-      "message": "濃郁的豚骨拉麵、柳州小船風情、糸島的夫妻岩、昭和風情的門司港及第一次參加日本LIVE。"
-    },
-    {
-      "id": 4,
-      "name": "箱根",
-      "position": { "x": 0.58, "y": 0.5 },
-      "thumbnail": "images/Hakone.png",
-      "message": "搭乘海盜船，滑破寧靜神秘的盧之湖，在雲霧繚繞之際被富士山的壯麗感動。"
-    },
-    {
-      "id": 5,
-      "name": "飛驒",
-      "position": { "x": 0.51, "y": 0.44 },
-      "thumbnail": "images/Hida.png",
-      "message": "高山中的小鎮，品嘗鮮美的飛驒牛與特色的五平餅，漫步在江戶街頭"
-    },
-    {
-      "id": 6,
-      "name": "出雲",
-      "position": { "x": 0.35, "y": 0.465 },
-      "thumbnail": "images/Izumo.png",
-      "message": "特地於神在月前往，與日本眾神明同歡，靜謐又肅穆的神社，是神道教的中心。"
-    },
-    {
-      "id": 7,
-      "name": "香川",
-      "position": { "x": 0.39, "y": 0.525 },
-      "thumbnail": "images/Kagawa.png",
-      "message": "烏龍麵的故鄉，與一覽無遺的天空鳥居，在正值梅花盛開季節前往。"
-    },
-    {
-      "id": 8,
-      "name": "鎌倉",
-      "position": { "x": 0.6, "y": 0.48 },
-      "thumbnail": "images/Kamakura.png",
-      "message": "江之島的神秘、莊嚴的大佛，走著走著，火車駛過海天一線的道路。"
-    },
-    {
-      "id": 9,
-      "name": "熊本",
-      "position": { "x": 0.5, "y": 0.5 },
-      "thumbnail": "images/Kumamoto.png",
-      "message": "韌性的熊本人，以熊本城為中心生活，這裡還是海賊王的故鄉，除了熊本熊以外，九州沒有熊。"
-    },
-    {
-      "id": 10,
-      "name": "京都",
-      "position": { "x": 0.46, "y": 0.48 },
-      "thumbnail": "images/Kyoto.png",
-      "message": "夏季的京都，充斥祭典的氛圍，現代又傳統的都市，花火大會與蘋果糖，浪漫又熱情。"
-    },
-    {
-      "id": 11,
-      "name": "三重",
-      "position": { "x": 0.49, "y": 0.52 },
-      "thumbnail": "images/Mie.png",
-      "message": "保有古老技藝的真珠島海女，美味的各式海產，守護大海與眾人的伊勢神宮。"
-    },
-    {
-      "id": 12,
-      "name": "紋別",
-      "position": { "x": 0.75, "y": 0.1 },
-      "thumbnail": "images/Monbetsu.png",
-      "message": "鮮甜可口的帝王蟹與鄂霍次克海的流冰，可惜強風攪局，破冰船無法出航。"
-    },
-    {
-      "id": 13,
-      "name": "長崎",
-      "position": { "x": 0.235, "y": 0.54 },
-      "thumbnail": "images/Nagasaki.png",
-      "message": "這裡記錄了二戰的傷痛，80年後的今日，在傷痛中繼續前進，銘記歷史，珍愛和平。"
-    },
-    {
-      "id": 14,
-      "name": "奈良",
-      "position": { "x": 0.475, "y": 0.5 },
-      "thumbnail": "images/Nara.png",
-      "message": "熱情親人的小鹿，與秋楓為伍，古色古香的街道，啜飲著咖啡。"
-    },
-    {
-      "id": 15,
-      "name": "大分",
-      "position": { "x": 0.29, "y": 0.558 },
-      "thumbnail": "images/Oita.png",
-      "message": "沿著鄉村小徑一路來到了由布院，駛著山路前往進擊的巨人水壩，品味著這個孕育出鉅作的小鎮。"
-    },
-    {
-      "id": 16,
-      "name": "USJ",
-      "position": { "x": 0.445, "y": 0.52 },
-      "thumbnail": "images/USJ.png",
-      "message": "走訪瀰漫焦糖香味的活米村，彷彿真的進到了魔法世界，轉身又是另一個遊戲天堂。"
-    },
-    {
-      "id": 17,
-      "name": "WTL",
-      "position": { "x": 0.46, "y": 0.51 },
-      "thumbnail": "images/WTL.png",
-      "message": "充斥世界各地的茶香，咖啡的濃厚與特色甜點，這裡是我打工一年的地方。"
-    },
-    {
-      "id": 18,
-      "name": "大阪",
-      "position": { "x": 0.455, "y": 0.508 },
-      "thumbnail": "images/Osaka.png",
-      "message": "大阪人的熱情奔放，熱鬧的商街，太陽之塔象徵著不斷在延續的生命。"
-    },
-    {
-      "id": 19,
-      "name": "長野",
-      "position": { "x": 0.58, "y": 0.44 },
-      "thumbnail": "images/Nagano.PNG",
-      "message": "坐擁著名的松本城，10年前來到日本時曾居住於這裡，純樸卻又充滿國際觀的長輩們，傳承著文化。"
-    },
-    {
-      "id": 20,
-      "name": "鳥取",
-      "position": { "x": 0.38, "y": 0.47 },
-      "thumbnail": "images/Tottori.PNG",
-      "message": "柯南與鬼太郎的故鄉，這裡還有美味又高檔的松葉蟹，可惜這次沒有駐足太久，希望能有機會再訪。"
-    },
-    {
-      "id": 21,
-      "name": "島根",
-      "position": { "x": 0.36, "y": 0.47 },
-      "thumbnail": "images/Shimane.PNG",
-      "message": "宍道湖出產了鮮味十足的蜆，附近還有日本著名的三大庭院造景美術館。"
-    },
-    {
-      "id": 22,
-      "name": "和歌山",
-      "position": { "x": 0.45, "y": 0.53 },
-      "thumbnail": "images/Wakayama.png",
-      "message": "在這三面環海的縣市，產酸甜恰到好處的柑橘，高處的和歌山城和除夕夜來訪響起的鐘聲，象徵新的開始。"
-    }    
-  ]
-  
+  {
+    "id": 1,
+    "name": "迪士尼樂園",
+    "position": { "x": 0.625, "y": 0.48 },
+    "image": "images/DisneyLand.png",
+    "message": "初次踏入童年與夢境交織的國度，感動湧上心頭，深深著迷於迪士尼的魔法世界。"
+  },
+  {
+    "id": 2,
+    "name": "迪士尼海洋",
+    "position": { "x": 0.63, "y": 0.485 },
+    "image": "images/DisneySea.png",
+    "message": "再訪迪士尼，感受截然不同的海洋魅力，在夢幻新園區裡，與唐老鴨共度美好時光。"
+  },
+  {
+    "id": 3,
+    "name": "福岡",
+    "position": { "x": 0.28, "y": 0.53 },
+    "image": "images/Fukuoka.png",
+    "message": "豚骨拉麵飄香、柳川小舟悠遊，昭和風情門司港與初次參加日本LIVE，回憶滿載。"
+  },
+  {
+    "id": 4,
+    "name": "箱根",
+    "position": { "x": 0.58, "y": 0.5 },
+    "image": "images/Hakone.png",
+    "message": "乘著海盜船破浪於盧之湖，雲霧繚繞間，富士山壯麗的身影令人屏息。"
+  },
+  {
+    "id": 5,
+    "name": "飛驒",
+    "position": { "x": 0.51, "y": 0.44 },
+    "image": "images/Hida.png",
+    "message": "隱藏在高山的小鎮，品味鮮嫩飛驒牛與五平餅，漫步在江戶時代的街道之中。"
+  },
+  {
+    "id": 6,
+    "name": "出雲",
+    "position": { "x": 0.35, "y": 0.46 },
+    "image": "images/Izumo.png",
+    "message": "在神在月特地前往，與八百萬神明同在，靜謐肅穆的出雲大社令人心生敬畏。"
+  },
+  {
+    "id": 7,
+    "name": "香川",
+    "position": { "x": 0.39, "y": 0.525 },
+    "image": "images/Kagawa.png",
+    "message": "烏龍麵之鄉，梅花綻放的季節，眺望天空之鳥居，風光絕美。"
+  },
+  {
+    "id": 8,
+    "name": "鎌倉",
+    "position": { "x": 0.6, "y": 0.48 },
+    "image": "images/Kamakura.png",
+    "message": "漫步江之島與大佛前，火車駛過海天交融的鐵道，美景如畫。"
+  },
+  {
+    "id": 9,
+    "name": "熊本",
+    "position": { "x": 0.27, "y": 0.56 },
+    "image": "images/Kumamoto.png",
+    "message": "以熊本城為中心，海賊王的故鄉，熊本熊之外，九州無熊，韌性十足的城市。"
+  },
+  {
+    "id": 10,
+    "name": "京都",
+    "position": { "x": 0.46, "y": 0.48 },
+    "image": "images/Kyoto.png",
+    "message": "夏季祭典熱鬧非凡，傳統與現代交織，花火大會與蘋果糖，描繪出浪漫京都。"
+  },
+  {
+    "id": 11,
+    "name": "三重",
+    "position": { "x": 0.49, "y": 0.52 },
+    "image": "images/Mie.png",
+    "message": "真珠島海女傳承古老技藝，美味海產與莊嚴的伊勢神宮，守護大海與人們。"
+  },
+  {
+    "id": 12,
+    "name": "滋賀",
+    "position": { "x": 0.475, "y": 0.48 },
+    "image": "images/Shiga.png",
+    "message": "琵琶湖環抱四方，景色獨特，人文薈萃，還有香氣四溢的近江牛。"
+  },
+  {
+    "id": 13,
+    "name": "長崎",
+    "position": { "x": 0.235, "y": 0.54 },
+    "image": "images/Nagasaki.png",
+    "message": "歷經戰火洗禮的城市，80年後仍堅強前行，銘記歷史，珍愛和平。"
+  },
+  {
+    "id": 14,
+    "name": "奈良",
+    "position": { "x": 0.475, "y": 0.5 },
+    "image": "images/Nara.png",
+    "message": "親人的小鹿與秋日紅葉相伴，古街漫步，手捧一杯溫暖咖啡。"
+  },
+  {
+    "id": 15,
+    "name": "大分",
+    "position": { "x": 0.29, "y": 0.558 },
+    "image": "images/Oita.png",
+    "message": "沿著鄉間小道抵達由布院，再穿越山路，造訪進擊的巨人水壩，小鎮故事動人。"
+  },
+  {
+    "id": 16,
+    "name": "USJ",
+    "position": { "x": 0.445, "y": 0.52 },
+    "image": "images/USJ.png",
+    "message": "穿梭活米村的焦糖香氣裡，進入魔法世界，轉眼又奔向歡樂遊戲天堂。"
+  },
+  {
+    "id": 17,
+    "name": "World Tea Labo",
+    "position": { "x": 0.46, "y": 0.51 },
+    "image": "images/WTL.png",
+    "message": "茶香四溢，咖啡濃郁，甜點精緻，這段時光成了我人生的珍貴寶藏。"
+  },
+  {
+    "id": 18,
+    "name": "大阪",
+    "position": { "x": 0.455, "y": 0.508 },
+    "image": "images/Osaka.png",
+    "message": "熱情奔放的大阪人，熙攘商街，太陽之塔象徵著生命的延續。"
+  },
+  {
+    "id": 19,
+    "name": "長野",
+    "position": { "x": 0.58, "y": 0.44 },
+    "image": "images/Nagano.PNG",
+    "message": "擁有松本城的純樸城市，曾旅居於此，感受長者們傳承的文化底蘊。"
+  },
+  {
+    "id": 20,
+    "name": "鳥取",
+    "position": { "x": 0.38, "y": 0.47 },
+    "image": "images/Tottori.PNG",
+    "message": "柯南、鬼太郎的故鄉，松葉蟹鮮甜可口，短暫停留後，期待再訪。"
+  },
+  {
+    "id": 21,
+    "name": "島根",
+    "position": { "x": 0.36, "y": 0.47 },
+    "image": "images/Shimane.PNG",
+    "message": "宍道湖孕育甘美蜆，近旁即是日本三大名園之一的絕美庭園。"
+  },
+  {
+    "id": 22,
+    "name": "和歌山",
+    "position": { "x": 0.45, "y": 0.53 },
+    "image": "images/Wakayama.PNG",
+    "message": "三面環海，產出甘酸適中的蜜柑，除夕夜鐘聲響起，迎接嶄新一年。"
+  },
+  {
+    "id": 23,
+    "name": "神戶",
+    "position": { "x": 0.43, "y": 0.49 },
+    "image": "images/Kobe.png",
+    "message": "鄰近淡路島的港口城市，海產豐饒，人們奔放熱情，是活力四溢的神戶。"
+  },
+  {
+    "id": 24,
+    "name": "岐阜",
+    "position": { "x": 0.5, "y": 0.45 },
+    "image": "images/Gifu.png",
+    "message": "世界遺產合掌村座落於此，鄰近的犬山城是織田信長的名城之一。"
+  },
+  {
+    "id": 25,
+    "name": "名古屋",
+    "position": { "x": 0.51, "y": 0.47 },
+    "image": "images/Nagoya.png",
+    "message": "工業重鎮，街景頗有台北之感，雞翅與台灣拉麵成為必嚐美食。"
+  },
+  {
+    "id": 26,
+    "name": "函館",
+    "position": { "x": 0.62, "y": 0.21 },
+    "image": "images/Hakodate.png",
+    "message": "港都風情融合和洋文化，五稜郭城與百萬夜景令人心醉神迷。"
+  },
+  {
+    "id": 27,
+    "name": "札幌",
+    "position": { "x": 0.67, "y": 0.13 },
+    "image": "images/Sapporo.png",
+    "message": "白雪覆蓋的都市中心，道民們展現著自由灑脫的個性。"
+  },
+  {
+    "id": 28,
+    "name": "小樽",
+    "position": { "x": 0.66, "y": 0.14 },
+    "image": "images/Otaru.png",
+    "message": "天狗山滑雪、運河邊散步，品嘗著知名甜點，冬日的小樽溫柔又浪漫。"
+  },
+  {
+    "id": 29,
+    "name": "旭川",
+    "position": { "x": 0.7, "y": 0.1 },
+    "image": "images/Asahikawa.png",
+    "message": "北國動物園與日劇場景，寒冬裡來一碗熱騰騰的味噌拉麵最暖心。"
+  },
+  {
+    "id": 30,
+    "name": "紋別",
+    "position": { "x": 0.75, "y": 0.1 },
+    "image": "images/Monbetsu.png",
+    "message": "帝王蟹鮮美，鄂霍次克海流冰壯觀，可惜破冰船因強風未能啟航。"
+  },
+  {
+    "id": 31,
+    "name": "美瑛",
+    "position": { "x": 0.71, "y": 0.11 },
+    "image": "images/Biei.png",
+    "message": "零下20度的奇蹟小鎮，聖誕樹、冰封瀑布與青池，彷彿步入童話世界。"
+  },
+  {
+    "id": 32,
+    "name": "洞爺",
+    "position": { "x": 0.67, "y": 0.16 },
+    "image": "images/Toya.png",
+    "message": "洞爺湖與硫磺地獄谷，泡湯時雪花靜靜飄落，彷彿時間也慢了下來。"
+  }
+]
