@@ -34,7 +34,7 @@ function renderPoints() {
     shadow.className = "pin-shadow";
 
     const img = document.createElement("img");
-    img.src = "images/pin.png";
+    img.src = "images/pin.webp";
     img.alt = "Map Pin";
     img.className = "pin-icon";
 
@@ -44,7 +44,7 @@ function renderPoints() {
     el.addEventListener("click", (e) => {
       e.stopPropagation();
       if (isPopupActive) {
-        closePopup(() => focusOnPoint(point, el), false); // ❗ 不 reset
+        closePopup(() => focusOnPoint(point, el), false); 
       } else {
         focusOnPoint(point, el);
       }
@@ -125,7 +125,7 @@ function closePopup(callback = null, resetMap = true) {
       applyTransform();
     }
     if (callback) callback();
-  }, 300);
+  }, 400);
 }
 
 
