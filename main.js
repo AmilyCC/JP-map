@@ -7,6 +7,7 @@ const popupImage = document.getElementById("popup-image");
 
 let mapData = [];
 let isPopupActive = false;
+let isScaleChanged = true;
 
 //  初始狀態
 let currentScale = 0.55;
@@ -92,7 +93,7 @@ function focusOnPoint(point, pointEl) {
     }
   }
 
-  // ⭐ 先開始 preload 圖片
+  //  先 preload 圖片
   const preloadImg = new Image();
   preloadImg.src = point.image;
   preloadImg.onload = () => {
@@ -100,15 +101,25 @@ function focusOnPoint(point, pointEl) {
     tryShowPopup();
   };
   preloadImg.onerror = () => {
-    isImageReady = true; // 即使錯誤也要 allow 顯示 popup
+    isImageReady = true;
     tryShowPopup();
   };
 
-  // ⭐ 然後開始縮放 & 平移動畫
+  // 開始縮放
   currentScale = defaultScale;
   applyTransform();
 
-  setTimeout(() => {
+  if (isScaleChanged) {
+    // 大小有變動就延遲
+    setTimeout(() => {
+      moveToTarget();
+      isScaleChanged = false; 
+    }, 300);
+  } else {
+    moveToTarget();
+  }
+
+  function moveToTarget() {
     const rect = pointEl.getBoundingClientRect();
     const currentX = rect.left + rect.width / 2;
     const currentY = rect.top + rect.height / 2;
@@ -124,9 +135,10 @@ function focusOnPoint(point, pointEl) {
     setTimeout(() => {
       isMoveReady = true;
       tryShowPopup();
-    }, 400); // 第二段，平移完
-  }, 100); // 先縮放，100ms就夠了
+    }, 400); // 平移完
+  }
 }
+
 
 
 //  關閉POPUP與地圖還原
@@ -180,12 +192,11 @@ window.addEventListener("mouseup", () => {
   document.body.classList.remove("dragging");
 });
 
-wrapper.addEventListener(
-  "wheel",
-  (e) => {
+wrapper.addEventListener("wheel", (e) => {
     e.preventDefault();
     const scaleAmount = -e.deltaY * 0.001;
     currentScale = Math.min(Math.max(0.5, currentScale + scaleAmount), 2);
+    isScaleChanged = true;
     applyTransform();
   },
   { passive: false }
@@ -205,9 +216,7 @@ wrapper.addEventListener("touchstart", (e) => {
   }
 });
 
-wrapper.addEventListener(
-  "touchmove",
-  (e) => {
+wrapper.addEventListener("touchmove", (e) => {
     e.preventDefault();
 
     if (e.touches.length === 1 && isTouchDragging) {
@@ -223,6 +232,7 @@ wrapper.addEventListener(
       const delta = newDist - lastTouchDist;
       currentScale = Math.min(Math.max(0.5, currentScale + delta * 0.005), 2);
       lastTouchDist = newDist;
+      isScaleChanged = true;
       applyTransform();
     }
   },
