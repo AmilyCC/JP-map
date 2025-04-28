@@ -67,7 +67,44 @@ function focusOnPoint(point, pointEl) {
   const targetScreenX = isMobile ? 40 : window.innerWidth / 2;
   const targetScreenY = isMobile ? 50 : window.innerHeight * 0.9;
 
-  //  先改 scale，再做偏移
+  let isImageReady = false;
+  let isMoveReady = false;
+
+  function tryShowPopup() {
+    if (isImageReady && isMoveReady) {
+      const rect = pointEl.getBoundingClientRect();
+      if (isMobile) {
+        popup.style.left = `${rect.right + 10}px`;
+        popup.style.top = `${rect.top}px`;
+      } else {
+        const popupWidth = 250;
+        const popupHeight = 500;
+        popup.style.left = `${rect.left + rect.width / 2 - popupWidth / 2}px`;
+        popup.style.top = `${rect.top - popupHeight - 16}px`;
+      }
+
+      popupTitle.innerText = point.name;
+      popupMessage.innerText = point.message;
+      popupImage.src = point.image;
+
+      popup.classList.remove("hide");
+      popup.classList.add("show");
+    }
+  }
+
+  // ⭐ 先開始 preload 圖片
+  const preloadImg = new Image();
+  preloadImg.src = point.image;
+  preloadImg.onload = () => {
+    isImageReady = true;
+    tryShowPopup();
+  };
+  preloadImg.onerror = () => {
+    isImageReady = true; // 即使錯誤也要 allow 顯示 popup
+    tryShowPopup();
+  };
+
+  // ⭐ 然後開始縮放 & 平移動畫
   currentScale = defaultScale;
   applyTransform();
 
@@ -85,32 +122,12 @@ function focusOnPoint(point, pointEl) {
     applyTransform();
 
     setTimeout(() => {
-      const rect = pointEl.getBoundingClientRect();
-      if (isMobile) {
-        popup.style.left = `${rect.right + 10}px`;
-        popup.style.top = `${rect.top}px`;
-      } else {
-        const popupWidth = 250;
-        const popupHeight = 500;
-        popup.style.left = `${rect.left + rect.width / 2 - popupWidth / 2}px`;
-        popup.style.top = `${rect.top - popupHeight - 16}px`;
-      }
-
-      // 預先建立 Image 來載入
-      const preloadImg = new Image();
-      preloadImg.src = point.image;
-
-      preloadImg.onload = () => {
-        popupTitle.innerText = point.name;
-        popupMessage.innerText = point.message;
-        popupImage.src = point.image;
-
-        popup.classList.remove("hide");
-        popup.classList.add("show");
-      };
-    }, 400);
-  }, 300);
+      isMoveReady = true;
+      tryShowPopup();
+    }, 400); // 第二段，平移完
+  }, 100); // 先縮放，100ms就夠了
 }
+
 
 //  關閉POPUP與地圖還原
 function closePopup(callback = null, resetMap = true) {
