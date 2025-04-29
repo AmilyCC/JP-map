@@ -44,7 +44,7 @@
   {
     "id": 7,
     "name": "香川",
-    "position": { "x": 0.39, "y": 0.525 },
+    "position": { "x": 0.395, "y": 0.525 },
     "image": "images/Kagawa.webp",
     "message": "烏龍麵之鄉，梅花綻放的季節，眺望天空之鳥居，風光絕美。"
   },
@@ -222,5 +222,12 @@
     "position": { "x": 0.67, "y": 0.16 },
     "image": "images/Toya.webp",
     "message": "洞爺湖與硫磺地獄谷，泡湯時雪花靜靜飄落，彷彿時間也慢了下來。"
+  },
+  {
+    "id": 33,
+    "name": "德島",
+    "position": { "x": 0.385, "y": 0.535 },
+    "image": "images/Tokushima.webp",
+    "message": "祖谷溪劃開壯闊山谷，乘船悠遊數億年雕琢的大步危，搭配酸桔與炭香四溢的烤魚，彷彿是大自然的贈禮。"
   }
 ]
