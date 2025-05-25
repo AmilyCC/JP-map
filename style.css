@@ -632,23 +632,16 @@ body.dragging #map-wrapper {
   }
 
   .progress-circle {
-    width: 80px;
-    height: 80px;
+    width: 120px;
+    height: 120px;
   }
 
   .progress-circle circle {
-    stroke-width: 6;
-  }
-
-  .progress-circle .progress-bg,
-  .progress-circle .progress-bar {
-    cx: 40;
-    cy: 40;
-    r: 36;
+    stroke-width: 8;
   }
 
   .progress-circle .progress-text {
-    font-size: 1.4em;
+    font-size: 1.8em;
   }
 
   .start-message {
