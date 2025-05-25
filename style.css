@@ -566,24 +566,24 @@ body.dragging #map-wrapper {
   height: 120px;
   margin: 0 auto;
   filter: drop-shadow(0 0 8px rgba(0, 0, 0, 0.3));
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .progress-circle svg {
   width: 100%;
   height: 100%;
   transform: rotate(-90deg);
-  -webkit-transform: rotate(-90deg);
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .progress-circle circle {
   fill: none;
   stroke-width: 8;
-  -webkit-transform: translateZ(0);
-  transform: translateZ(0);
+  transform-origin: center;
 }
 
 .progress-circle .progress-bg {
@@ -594,7 +594,6 @@ body.dragging #map-wrapper {
   stroke: url(#gradient);
   stroke-linecap: round;
   transition: stroke-dashoffset 0.3s ease;
-  -webkit-transition: stroke-dashoffset 0.3s ease;
 }
 
 .progress-circle .progress-text {
@@ -602,12 +601,11 @@ body.dragging #map-wrapper {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
   font-size: 1.8em;
   font-weight: 700;
   color: white;
   text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.5);
-  -webkit-font-smoothing: antialiased;
+  z-index: 1;
 }
 
 .loading-text {
