@@ -28,15 +28,14 @@ const progressText = document.querySelector('.progress-text');
 const loadingText = document.querySelector('.loading-text');
 
 // 設置圓形進度條的初始狀態
-const radius = window.innerWidth <= 768 ? 36 : 54;
+const radius = 54;
 const circumference = 2 * Math.PI * radius;
 progressBar.style.strokeDasharray = circumference;
 progressBar.style.strokeDashoffset = circumference;
 
 // 監聽視窗大小變化
 window.addEventListener('resize', () => {
-  const newRadius = window.innerWidth <= 768 ? 36 : 54;
-  const newCircumference = 2 * Math.PI * newRadius;
+  const newCircumference = 2 * Math.PI * radius;
   progressBar.style.strokeDasharray = newCircumference;
   progressBar.style.strokeDashoffset = newCircumference;
 });
